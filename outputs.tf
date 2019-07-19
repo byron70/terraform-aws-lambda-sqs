@@ -27,3 +27,13 @@ output "role_name" {
   description = "The name of the IAM role created for the Lambda function"
   value       = aws_iam_role.lambda.name
 }
+
+output "sqs_arn" {
+  description = "The ARN of the SQS queue triggering the Lambda function"
+  value = aws_sqs_queue.sqs.arn
+}
+
+output "sqs_url" {
+  description = "The URL of the SQS queue triggering the Lambda function"
+  value = aws_sqs_queue.sqs.id
+}

@@ -48,3 +48,9 @@ resource "aws_lambda_function" "lambda" {
     }
   }
 }
+
+resource "aws_lambda_event_source_mapping" "event_source" {
+  event_source_arn = aws_sqs_queue.sqs.arn  
+  function_name = aws_lambda_function.lambda.arn
+}
+
