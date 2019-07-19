@@ -27,7 +27,7 @@ This Terraform module creates and uploads an AWS Lambda function and hides the u
 
 ```js
 module "lambda" {
-  source = "github.com/claranet/terraform-aws-lambda"
+  source = "github.com/byron70/terraform-aws-lambda-sqs"
 
   function_name = "deployment-deploy-status"
   description   = "Deployment deploy status task"
